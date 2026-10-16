@@ -8,7 +8,7 @@
 <meta name="keywords" content="otkup racunara beograd, otkup komponenti, otkup grafickih karti, servis racunara beograd, sastavljanje racunara, gejming racunar po meri, zamena termalne paste">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="author" content="Miholja Računari">
-<meta name="theme-color" content="#0a0a0b">
+<meta name="theme-color" content="#232529">
 <meta name="color-scheme" content="dark">
 <link rel="canonical" href="https://miholjaracunari.rs/">
 <link rel="alternate" hreflang="sr-Latn" href="https://miholjaracunari.rs/">
@@ -35,8 +35,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230a0a0b'/%3E%3Cpath d='M14 46V18h7l11 15 11-15h7v28h-7V30L32 44 21 30v16z' fill='%23ecebe8'/%3E%3Crect x='14' y='50' width='36' height='3' fill='%23b5262e'/%3E%3C/svg%3E">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-<script>document.documentElement.classList.add("js")</script>
-<link rel="preload" as="image" href="bg.webp" type="image/webp">
+<script>document.documentElement.classList.add("js","pl-lock");setTimeout(function(){document.documentElement.classList.remove("pl-lock")},9000)</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap">
@@ -168,9 +167,9 @@
 <style>
 /* ============ TOKENS ============ */
 :root{
-  --bg:#0a0a0b; --bg-2:#0e0e10; --surface:#131316; --surface-2:#18181c; --surface-3:#1e1e23;
-  --line:#232328; --line-2:#2f2f36;
-  --text:#ecebe8; --muted:#9b9ba3; --dim:#66666e;
+  --bg:#232529; --bg-2:#1f2124; --surface:#2a2c31; --surface-2:#303338; --surface-3:#373a40;
+  --line:#33363c; --line-2:#41444b;
+  --text:#ecebe8; --muted:#9b9ba3; --dim:#7c7e86;
   --red:#b3262d; --red-hi:#cc3a40; --red-lo:#7d1a20; --red-soft:rgba(179,38,45,.12);
   --ok:#5f9c6b;
   --r:6px; --r-lg:10px;
@@ -181,7 +180,7 @@
   --ease:cubic-bezier(.2,.7,.2,1);
 }
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+html{scroll-behavior:smooth;scrollbar-gutter:stable;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.6 var(--f);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden}
 img,svg{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
@@ -194,13 +193,6 @@ section[id]{scroll-margin-top:calc(var(--head-h) + 8px)}
 .skip{position:absolute;left:12px;top:-60px;z-index:200;background:var(--red);color:#fff;padding:10px 14px;border-radius:var(--r)}
 .skip:focus{top:12px}
 
-/* site background image (fixed, works on iOS too) */
-body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
-  background:linear-gradient(rgba(10,10,11,.3),rgba(10,10,11,.3)),url("bg.jpg") center/cover no-repeat;
-  background-image:linear-gradient(rgba(10,10,11,.3),rgba(10,10,11,.3)),image-set(url("bg.webp") type("image/webp"),url("bg.jpg") type("image/jpeg"))}
-/* subtle film grain over everything (static, cheap) */
-body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.035;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 
 /* ============ TYPE ============ */
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font:500 12px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
@@ -216,7 +208,7 @@ h3{font-size:clamp(19px,1.6vw,22px);font-weight:650;letter-spacing:-.01em;line-h
 
 /* ============ BUTTONS ============ */
 .btn{--bh:52px;display:inline-flex;align-items:center;justify-content:center;gap:10px;height:var(--bh);padding:0 22px;border-radius:var(--r);border:1px solid var(--line-2);background:var(--surface);font-weight:600;font-size:15px;letter-spacing:.01em;cursor:pointer;transition:background .2s var(--ease),border-color .2s var(--ease),transform .2s var(--ease);white-space:nowrap}
-.btn:hover{border-color:#45454d;background:var(--surface-2)}
+.btn:hover{border-color:#5a5e66;background:var(--surface-2)}
 .btn:active{transform:translateY(1px)}
 .btn svg{width:18px;height:18px;flex:none}
 .btn--red{background:var(--red);border-color:var(--red);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 0 0 0 var(--red-soft)}
@@ -227,7 +219,7 @@ h3{font-size:clamp(19px,1.6vw,22px);font-weight:650;letter-spacing:-.01em;line-h
 
 /* ============ HEADER ============ */
 .hdr{position:fixed;inset:0 0 auto 0;z-index:50;height:var(--head-h);transition:background .25s,border-color .25s;border-bottom:1px solid transparent}
-.hdr.is-solid{background:rgba(10,10,11,.82);backdrop-filter:saturate(140%) blur(14px);-webkit-backdrop-filter:saturate(140%) blur(14px);border-bottom-color:var(--line)}
+.hdr.is-solid{background:rgba(35,37,41,.88);backdrop-filter:saturate(140%) blur(14px);-webkit-backdrop-filter:saturate(140%) blur(14px);border-bottom-color:var(--line)}
 .hdr .wrap{height:100%;display:flex;align-items:center;gap:28px}
 .logo{display:flex;align-items:center;gap:12px;font-weight:800;font-stretch:80%;text-transform:uppercase;letter-spacing:.02em;font-size:19px;line-height:1}
 .logo-mark{width:34px;height:34px;flex:none}
@@ -247,10 +239,6 @@ h3{font-size:clamp(19px,1.6vw,22px);font-weight:650;letter-spacing:-.01em;line-h
 
 /* ============ HERO ============ */
 .hero{position:relative;padding:calc(var(--head-h) + clamp(48px,9vh,110px)) 0 clamp(56px,8vw,96px);overflow:hidden;isolation:isolate}
-.hero::before{content:"";position:absolute;inset:0;z-index:-2;
-  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
-  background-size:64px 64px;opacity:.45;
-  -webkit-mask-image:radial-gradient(ellipse 70% 60% at 70% 30%,#000 10%,transparent 75%);mask-image:radial-gradient(ellipse 70% 60% at 70% 30%,#000 10%,transparent 75%)}
 .hero::after{display:none;content:"";position:absolute;z-index:-1;width:min(900px,120vw);aspect-ratio:1;right:-25%;top:-35%;background:radial-gradient(closest-side,rgba(179,38,45,.16),transparent 70%);pointer-events:none}
 .hero-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.9fr);gap:clamp(32px,5vw,72px);align-items:end}
 .hero h1{margin:22px 0 26px}
@@ -291,7 +279,7 @@ h3{font-size:clamp(19px,1.6vw,22px);font-weight:650;letter-spacing:-.01em;line-h
 .sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 64px;align-items:end;margin-bottom:clamp(40px,6vw,72px)}
 .sec-head h2{margin-top:18px}
 .sec-head .lead{margin:0}
-.idx{position:absolute;right:var(--gut);top:clamp(56px,8vw,110px);font:800 clamp(80px,14vw,200px)/.8 var(--f);font-stretch:62%;color:transparent;-webkit-text-stroke:1px #1d1d22;pointer-events:none;user-select:none;z-index:-1}
+.idx{position:absolute;right:var(--gut);top:clamp(56px,8vw,110px);font:800 clamp(80px,14vw,200px)/.8 var(--f);font-stretch:62%;color:transparent;-webkit-text-stroke:1px #33363c;pointer-events:none;user-select:none;z-index:-1}
 .sec{isolation:isolate}
 
 /* ---- otkup features ---- */
@@ -326,8 +314,8 @@ h3{font-size:clamp(19px,1.6vw,22px);font-weight:650;letter-spacing:-.01em;line-h
 textarea.inp{height:auto;min-height:96px;padding:12px 14px;resize:vertical;line-height:1.5}
 select.inp{padding-right:40px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%239b9ba3' stroke-width='1.6'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;cursor:pointer}
 select.inp option{background:var(--surface)}
-.inp::placeholder{color:#55555c}
-.inp:hover{border-color:#3d3d45}
+.inp::placeholder{color:#70737b}
+.inp:hover{border-color:#52565e}
 .inp:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 3px var(--red-soft)}
 .f.err .inp{border-color:var(--red-hi)}
 .f .msg{display:none;font-size:12px;color:var(--red-hi)}
@@ -435,7 +423,7 @@ a.cc:hover{border-color:var(--red-lo);background:var(--surface-2)}
 .ftr nav{display:flex;flex-wrap:wrap;gap:6px 24px;font-size:14px;color:var(--muted)}
 .ftr nav a:hover{color:var(--text)}
 .ftr-bot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-top:24px;font-size:13px;color:var(--dim)}
-.ftr-kw{font-size:12px;color:#4a4a52;max-width:70ch}
+.ftr-kw{font-size:12px;color:#686b72;max-width:70ch}
 
 /* ============ MOBILE BAR ============ */
 .mbar{display:none}
@@ -463,19 +451,18 @@ a.cc:hover{border-color:var(--red-lo);background:var(--surface-2)}
   .ig-tiles{grid-template-columns:repeat(6,1fr)}
 }
 @media (max-width:860px){
-  body::after{background-position:center,18% center}
   :root{--head-h:60px}
   .nav,.hdr .hdr-cta{display:none}
   .burger{display:grid}
-  .hdr.menu-open{background:rgba(10,10,11,.97);border-bottom-color:var(--line)}
-  .hdr.menu-open .nav{display:flex;position:fixed;top:var(--head-h);left:0;right:0;flex-direction:column;gap:0;padding:8px var(--gut) 24px;background:rgba(10,10,11,.97);border-bottom:1px solid var(--line)}
+  .hdr.menu-open{background:rgba(35,37,41,.98);border-bottom-color:var(--line)}
+  .hdr.menu-open .nav{display:flex;position:fixed;top:var(--head-h);left:0;right:0;flex-direction:column;gap:0;padding:8px var(--gut) 24px;background:rgba(35,37,41,.98);border-bottom:1px solid var(--line)}
   .hdr.menu-open .nav a{padding:16px 0;font-size:18px;border-bottom:1px solid var(--line);border-radius:0;color:var(--text)}
   .hdr.menu-open .nav a.is-active::after{display:none}
   .svc{grid-template-columns:1fr}
   .signs{grid-template-columns:1fr;gap:14px}
   .area{grid-template-columns:1fr}
   body{padding-bottom:calc(68px + env(safe-area-inset-bottom))}
-  .mbar{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;position:fixed;left:0;right:0;bottom:0;z-index:80;padding:8px 8px calc(8px + env(safe-area-inset-bottom));background:rgba(12,12,14,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line-2)}
+  .mbar{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;position:fixed;left:0;right:0;bottom:0;z-index:80;padding:8px 8px calc(8px + env(safe-area-inset-bottom));background:rgba(35,37,41,.96);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line-2)}
   .mbar a{display:flex;align-items:center;justify-content:center;gap:8px;height:52px;border-radius:var(--r);background:var(--surface-2);border:1px solid var(--line-2);font-weight:600;font-size:14px}
   .mbar a:first-child{background:var(--red);border-color:var(--red);color:#fff}
   .mbar svg{width:19px;height:19px}
@@ -496,9 +483,151 @@ a.cc:hover{border-color:var(--red-lo);background:var(--surface-2)}
   *,*::before,*::after{animation:none!important;transition:none!important}
   .js .rv{opacity:1;transform:none}
 }
+
+html.pl-lock,html.pl-lock body{overflow:hidden}
+html.pl-lock{background:#0a0a0a}
+html:not(.js) #preloader{display:none}
+
+
+/* ============ PRELOADER: 3D FLIP COIN / TOKEN ============ */
+#preloader{--neon:#ff1a1a;
+  position:fixed;top:0;left:0;width:100vw;height:100vh;height:100dvh;z-index:9999;background:#0a0a0a;color:#f2f2f2;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(56px,9vh,84px);overflow:hidden;
+  font-family:var(--f);transition:opacity .6s ease-out,transform .6s ease-out;animation:plFailsafe 0s 9s forwards}
+#preloader.pl-out{opacity:0;transform:scale(1.05);pointer-events:none}
+@keyframes plFailsafe{to{opacity:0;visibility:hidden}}
+
+.pl-token{--c:clamp(160px,22vw,220px);--t:16px;position:relative;width:var(--c);height:var(--c);perspective:900px;animation:plIn .6s cubic-bezier(.2,.7,.2,1) both}
+.pl-token::before{content:"";position:absolute;inset:-45%;border-radius:50%;pointer-events:none;
+  background:radial-gradient(closest-side,rgba(255,26,26,.16),transparent 70%)}
+.pl-coin{position:relative;width:100%;height:100%;transform-style:preserve-3d;animation:plCoin 2s infinite}
+.pl-coin>*{position:absolute;inset:0;border-radius:50%}
+/* rub novcica: slojevi diskova = debljina */
+.pl-coin i{transform:translateZ(var(--z));background:linear-gradient(180deg,#3d0404,#ff1a1a 50%,#3d0404)}
+/* lica */
+.pl-face{transform:translateZ(calc(var(--t) / 2));-webkit-backface-visibility:hidden;backface-visibility:hidden;overflow:hidden;
+  background:radial-gradient(circle at 34% 28%,#27272c,#131315 55%,#0b0b0c);
+  box-shadow:0 0 0 2px var(--neon),0 0 14px var(--neon),0 0 34px rgba(255,26,26,.45),
+    inset 0 0 0 8px #0c0c0d,inset 0 0 0 9px rgba(255,26,26,.6),inset 0 0 26px rgba(0,0,0,.9)}
+.pl-face.b{transform:rotateY(180deg) translateZ(calc(var(--t) / 2))}
+.pl-face svg{width:100%;height:100%;filter:drop-shadow(0 1px 0 rgba(255,255,255,.12)) drop-shadow(0 -1px 0 rgba(0,0,0,.9))}
+.pl-face .eng{fill:none;stroke:#55555d;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.pl-face .eng-f{fill:#5c5c64}
+.pl-face .led{fill:none;stroke:var(--neon);stroke-width:2.4;stroke-linecap:round}
+.pl-face .rim{font:700 10.5px var(--mono);letter-spacing:.06em;fill:#4d4d55}
+.pl-face .mid{font-weight:800;font-stretch:80%;font-size:15px;letter-spacing:.06em;text-transform:uppercase;fill:#6a6a72}
+/* odsjaj koji prelazi preko lica */
+.pl-face::after{content:"";position:absolute;inset:0;border-radius:50%;pointer-events:none;mix-blend-mode:screen;
+  background:linear-gradient(115deg,transparent 36%,rgba(255,255,255,.16) 48%,rgba(255,60,60,.22) 53%,transparent 64%);
+  background-size:260% 260%;animation:plShine 1s cubic-bezier(.6,0,.4,1) infinite}
+.pl-shadow{position:absolute;left:14%;right:14%;bottom:-40px;height:14px;border-radius:50%;
+  background:radial-gradient(closest-side,rgba(255,26,26,.5),transparent);filter:blur(3px);animation:plShadow .5s cubic-bezier(.6,0,.4,1) infinite alternate}
+
+.pl-ui{width:min(440px,100% - 48px);text-align:center;animation:plFade .5s .15s both}
+.pl-label{margin:0 0 14px;font:500 11px/1.4 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:#a6a6ad}
+.pl-label b{font-weight:600;color:#fff;text-shadow:0 0 8px var(--neon)}
+.pl-row{display:flex;align-items:center;gap:14px}
+.pl-bar{position:relative;flex:1;height:2px;border-radius:2px;background:rgba(255,255,255,.08)}
+.pl-bar i{position:absolute;inset:0;border-radius:2px;transform-origin:left;transform:scaleX(0);background:var(--neon);box-shadow:0 0 8px var(--neon),0 0 18px rgba(255,26,26,.55)}
+.pl-pct{min-width:4ch;text-align:right;font:500 12px/1 var(--mono);color:#fff;font-variant-numeric:tabular-nums}
+
+@keyframes plCoin{
+  0%{transform:rotateX(8deg) rotateY(0deg);animation-timing-function:cubic-bezier(.6,0,.4,1)}
+  50%{transform:rotateX(8deg) rotateY(180deg);animation-timing-function:cubic-bezier(.6,0,.4,1)}
+  100%{transform:rotateX(8deg) rotateY(360deg)}}
+@keyframes plShine{from{background-position:100% 0}to{background-position:0 100%}}
+@keyframes plShadow{from{transform:scaleX(1);opacity:1}to{transform:scaleX(.3);opacity:.55}}
+@keyframes plIn{from{opacity:0;transform:scale(.8)}}
+@keyframes plFade{from{opacity:0}}
+@media (max-width:560px){.pl-label{font-size:10px;letter-spacing:.12em}}
 </style>
 </head>
 <body>
+<!-- ================= PRELOADER: 3D FLIP COIN / TOKEN ================= -->
+<div id="preloader" role="status" aria-live="polite" aria-label="Učitavanje sajta Miholja Računari">
+  <div class="pl-token" aria-hidden="true">
+    <div class="pl-coin">
+      <i style="--z:-7px"></i><i style="--z:-5px"></i><i style="--z:-3px"></i><i style="--z:-1px"></i>
+      <i style="--z:1px"></i><i style="--z:3px"></i><i style="--z:5px"></i><i style="--z:7px"></i>
+
+      <!-- STRANA A: Servis & Sklapanje -->
+      <div class="pl-face a">
+        <svg viewBox="0 0 200 200">
+          <defs><path id="plArcA" d="M100 100m-76 0a76 76 0 1 1 152 0a76 76 0 1 1-152 0"/></defs>
+          <text class="rim"><textPath href="#plArcA" textLength="470" lengthAdjust="spacing">MIHOLJA RAČUNARI • MIHOLJA RAČUNARI •</textPath></text>
+          <rect class="eng" x="80" y="52" width="40" height="62" rx="4"/>
+          <circle class="eng" cx="100" cy="71" r="9"/><circle class="eng-f" cx="100" cy="71" r="2.4"/>
+          <path class="eng" d="M89 92h22M89 99h22"/>
+          <path class="led" d="M86 107h28"/>
+          <text class="mid" x="100" y="138" text-anchor="middle">SERVIS &amp;</text>
+          <text class="mid" x="100" y="155" text-anchor="middle">SKLAPANJE</text>
+        </svg>
+      </div>
+
+      <!-- STRANA B: Otkup -->
+      <div class="pl-face b">
+        <svg viewBox="0 0 200 200">
+          <defs><path id="plArcB" d="M100 100m-76 0a76 76 0 1 1 152 0a76 76 0 1 1-152 0"/></defs>
+          <text class="rim"><textPath href="#plArcB" textLength="470" lengthAdjust="spacing">MIHOLJARACUNARI.RS • OTKUP ZA KEŠ •</textPath></text>
+          <rect class="eng" x="70" y="58" width="58" height="34" rx="3" opacity=".55"/>
+          <rect class="eng" x="64" y="66" width="62" height="38" rx="3"/>
+          <circle class="eng" cx="95" cy="85" r="9"/>
+          <path class="eng" d="M71 73v4M119 93v4"/>
+          <path class="led" d="M106 112h-28M84 106l-6 6 6 6"/>
+          <text class="mid" x="100" y="138" text-anchor="middle">INSTANT KEŠ</text>
+          <text class="mid" x="100" y="155" text-anchor="middle">OTKUP</text>
+        </svg>
+      </div>
+    </div>
+    <span class="pl-shadow"></span>
+  </div>
+
+  <div class="pl-ui">
+    <p class="pl-label"><b>Miholja Računari</b> • Učitavanje...</p>
+    <div class="pl-row"><div class="pl-bar"><i></i></div><span class="pl-pct">0%</span></div>
+  </div>
+</div>
+<script>
+/* Preloader: 2.0 s (ceka i window "load", najvise 6 s), zatim fade-out + scale-up i otkljucan skrol */
+(() => {
+  const pl = document.getElementById("preloader");
+  if (!pl) return;
+  const root = document.documentElement;
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const MIN = reduce ? 600 : 2000, MAX = 6000;
+  const bar = pl.querySelector(".pl-bar i"), pct = pl.querySelector(".pl-pct");
+  const t0 = performance.now();
+  let loaded = document.readyState === "complete", shown = -1, done = false;
+  addEventListener("load", () => { loaded = true; }, { once: true });
+
+  const cleanup = () => {
+    if (!pl.isConnected) return;
+    pl.style.display = "none";
+    pl.remove();
+    root.classList.remove("pl-lock");
+    window.__plDone = true;
+    document.dispatchEvent(new Event("preloader:done"));
+  };
+  const finish = () => {
+    if (done) return; done = true;
+    pl.classList.add("pl-out");
+    pl.addEventListener("transitionend", e => { if (e.target === pl && e.propertyName === "opacity") cleanup(); });
+    setTimeout(cleanup, 700);
+  };
+  const tick = now => {
+    const el = now - t0;
+    let p = Math.min(el / MIN, 1);
+    if (!loaded && el < MAX) p = Math.min(p, 0.96);
+    const d = p * p * (3 - 2 * p);
+    bar.style.transform = "scaleX(" + d + ")";
+    const n = Math.round(d * 100);
+    if (n !== shown) { shown = n; pct.textContent = n + "%"; }
+    if (p >= 1) { setTimeout(finish, 120); return; }
+    requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+})();
+</script>
 <a class="skip" href="#main">Preskoči na sadržaj</a>
 
 <!-- SVG sprite -->
@@ -980,7 +1109,13 @@ a.cc:hover{border-color:var(--red-lo);background:var(--surface-2)}
     const rio = new IntersectionObserver(entries => {
       entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add("in"); rio.unobserve(en.target); } });
     }, { rootMargin: "0px 0px -8% 0px" });
-    $$(".rv").forEach((el, i) => { el.style.transitionDelay = (i % 4) * 60 + "ms"; rio.observe(el); });
+    // ulazne animacije krecu tek kada preloader nestane
+    const startReveal = () => $$(".rv").forEach((el, i) => {
+      el.style.transitionDelay = (el.closest(".hero") ? i * 90 : (i % 4) * 60) + "ms";
+      rio.observe(el);
+    });
+    if (document.getElementById("preloader") && !window.__plDone) document.addEventListener("preloader:done", startReveal, { once: true });
+    else startReveal();
   } else { $$(".rv").forEach(el => el.classList.add("in")); }
 
   /* ====== toast ====== */
